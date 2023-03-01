@@ -1,3 +1,31 @@
 data:
   data_file_1: 'data/raw/car_price_prediction.csv'
   data_file_2: 'data/processed/car_price_prediction.csv'
+  data_file_3: 'data/processed/_analyzed.csv'
+  data_file_4: 'data/processed/featured.csv'
+  data_file_5: 'data/processed/X_train.csv'
+  data_file_6: 'data/processed/X_test.csv'
+  data_file_7: 'data/processed/y_train.csv'
+  data_file_8: 'data/processed/y_test.csv'
+
+plot:
+  plot_1: 'plots/analysis/prod_year_mean.jpeg'
+  plot_2: 'plots/analysis/manufacturer_mean.jpeg'
+  plot_3: 'plots/analysis/heatmap.jpeg'
+  plot_4: 'plots/analysis/mileage_mean.jpeg'
+  plot_5: 'plots/analysis/gear_type_distribution.jpeg'
+  plot_6: 'plots/analysis/gear_box_mean.jpeg'
+  plot_7: 'plots/analysis/box_plot.jpeg'
+  plot_8: 'plots/evaluate/scatter_plot.jpeg'
+
+base:
+  params:
+    learning_rate: 0.25911329031077535
+    max_depth: 8
+    n_estimators: 169
+
+model:
+  name: 'model/model.joblib'
+
+metric:
+  path: 'metrics'
