@@ -1,0 +1,3 @@
+data:
+  data_file_1: 'data/raw/car_price_prediction.csv'
+  data_file_2: 'data/processed/car_price_prediction.csv'
