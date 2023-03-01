@@ -38,5 +38,7 @@ def data_split() -> None:
     y_train.to_csv(config_['data']['data_file_7'])
     y_test.to_csv(config_['data']['data_file_8'])
 
+    print("Data Successfully Splitted and Saved")
+
 if __name__ == "__main__":
     data_split()

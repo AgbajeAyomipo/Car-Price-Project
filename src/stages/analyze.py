@@ -153,5 +153,7 @@ def analyze() -> None:
 
     df_.to_csv(config_['data']['data_file_3'])
 
+    print("Data Analyzed and Saved")
+
 if __name__ == "__main__":
     analyze()

@@ -165,5 +165,7 @@ def featurize() -> None:
 
     df__.to_csv(config__['data']['data_file_4'])
 
+    print('Data Successfully Featurized and Saved')
+
 if __name__ == "__main__":
     featurize()

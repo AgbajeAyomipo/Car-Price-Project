@@ -26,6 +26,8 @@ def train() -> None:
 
     joblib.name(xgbr, config_['model']['name'])
 
+    print('Model Successfully trained')
+
 if __name__ == "__main__":
     
     train()

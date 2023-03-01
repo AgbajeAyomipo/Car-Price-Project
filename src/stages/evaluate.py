@@ -50,5 +50,7 @@ def evaluate() -> None:
 
     plt.savefig(config_['plot']['plot_8'])
 
+    print('Metrics have now been evaluated and results saved')
+
 if __name__ == "__main__":
     evaluate()
