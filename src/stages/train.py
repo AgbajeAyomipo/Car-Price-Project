@@ -24,7 +24,7 @@ def train() -> None:
 
     xgbr.fit(X_train, y_train)
 
-    joblib.name(xgbr, config_['model']['name'])
+    joblib.dump(xgbr, config_['model']['name'])
 
     print('Model Successfully trained')
 
