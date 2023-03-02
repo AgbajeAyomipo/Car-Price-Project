@@ -20,6 +20,27 @@ stages:
     - path: data/processed/_analyzed_.csv
       md5: 3ad5892f9f3f0b1f0dddec2e91b15e8f
       size: 2653086
+    - path: plots/analysis/box_plot.jpeg
+      md5: cf5798327bf3d0780a789643c0782a33
+      size: 32552
+    - path: plots/analysis/gear_box_mean.jpeg
+      md5: 798d1653affda57d9032d76650f93e2d
+      size: 46043
+    - path: plots/analysis/gear_type_distribution.jpeg
+      md5: d385bc4b4374d5683fff6caabd285085
+      size: 47732
+    - path: plots/analysis/heatmap.jpeg
+      md5: 43f83dfea7e7fff2280adf1b6a056e1c
+      size: 22356
+    - path: plots/analysis/manufacturer_mean.jpeg
+      md5: 239730285eaa476f1b70cb1eba880af2
+      size: 75759
+    - path: plots/analysis/mileage_mean.jpeg
+      md5: 7d086951831889432b84fd00f79d1811
+      size: 46670
+    - path: plots/analysis/prod_year_mean.jpeg
+      md5: f98f5b64bd91d62064a40cd08ee2e37d
+      size: 69429
   featurize:
     cmd: python src/stages/featurize.py
     deps:
