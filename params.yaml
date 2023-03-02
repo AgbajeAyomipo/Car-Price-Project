@@ -1,8 +1,8 @@
 data:
   data_file_1: 'data/raw/car_price_prediction.csv'
-  data_file_2: 'data/processed/car_price_prediction.csv'
-  data_file_3: 'data/processed/_analyzed.csv'
-  data_file_4: 'data/processed/featured.csv'
+  data_file_2: 'data/processed/car_price_prediction_.csv'
+  data_file_3: 'data/processed/_analyzed_.csv'
+  data_file_4: 'data/processed/_featured_.csv'
   data_file_5: 'data/processed/X_train.csv'
   data_file_6: 'data/processed/X_test.csv'
   data_file_7: 'data/processed/y_train.csv'

@@ -18,8 +18,11 @@ def evaluate() -> None:
     with open('params.yaml') as config__:
         config_ = yaml.safe_load(config__)
     
-    X_test = pd.DataFrame(config_['data']['data_file_6'])
-    y_test = pd.DataFrame(config_['data']['data_file_8'])
+    X_test = pd.read_csv(config_['data']['data_file_6'])
+    y_test = pd.read_csv(config_['data']['data_file_8'])
+
+    X_test = X_test[X_test.columns].values
+    y_test = y_test['Price'].values
 
     xgbr = joblib.load(config_['model']['name'])
 

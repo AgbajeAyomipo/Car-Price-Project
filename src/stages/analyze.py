@@ -116,12 +116,12 @@ def analyze() -> None:
     plt.title('Plot Showing Presence of Outliers in the Price Column, by Color of the Car')
     plt.savefig(config_['plot']['plot_7'])
 
-    df_ = df_.sort_values(by = df_.columns[-1], ascending= False)
-    df_ = df_.iloc[1:, :]
+    # df_ = df_.sort_values(by = df_.columns[-1], ascending= False)
+    # df_ = df_.iloc[1:, :]
     # df_ = df_.drop('Unnamed: 0', axis = 1)
 
-    not_categorical_ = df_._get_numeric_data().columns
-    categorical_ = set(df_.columns).difference(not_categorical_)
+    # not_categorical_ = df_._get_numeric_data().columns
+    # categorical_ = set(df_.columns).difference(not_categorical_)
 
     def engine_size(col_):
         if ('Turbo' in col_) & (float(col_.split(' ')[0]) <= 3):

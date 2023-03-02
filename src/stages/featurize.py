@@ -172,7 +172,7 @@ def featurize() -> None:
 
     model_df_ = pd.get_dummies(df_['Model'], drop_first = True)
     df__ = pd.concat([df_, model_df_], axis = 1)
-    df_ = df_.drop(['ID', 'Model'], axis = 1)
+    df_ = df__.drop(['ID', 'Model'], axis = 1)
 
     df_.to_csv(config_['data']['data_file_4'])
 

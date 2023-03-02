@@ -16,6 +16,9 @@ def train() -> None:
     X_train = pd.read_csv(config_['data']['data_file_5'])
     y_train = pd.read_csv(config_['data']['data_file_7'])
 
+    X_train = X_train[X_train.columns].values
+    y_train = y_train['Price'].values
+
     xgbr = XGBRegressor(
         n_estimators = config_['base']['params']['n_estimators'],
         max_depth = config_['base']['params']['max_depth'],
