@@ -174,7 +174,7 @@ def featurize() -> None:
     df__ = pd.concat([df_, model_df_], axis = 1)
     df_ = df__.drop(['ID', 'Model'], axis = 1)
 
-    df_.to_csv(config_['data']['data_file_4'])
+    df_.to_csv(config_['data']['data_file_4'], index = 0)
 
     print('Data Successfully Featurized and Saved')
 

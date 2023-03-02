@@ -1,0 +1,5 @@
+[core]
+    remote = my_remote
+    autostage = true
+['remote "my_remote"']
+    url = /remote_

@@ -11,9 +11,41 @@ stages:
     - data/processed/car_price_prediction_.csv
     outs:
     - data/processed/_analyzed_.csv
+    - plots/analysis/prod_year_mean.jpeg
+    - plots/analysis/manufacturer_mean.jpeg
+    - plots/analysis/heatmap.jpeg
+    - plots/analysis/mileage_mean.jpeg
+    - plots/analysis/gear_type_distribution.jpeg
+    - plots/analysis/gear_box_mean.jpeg
+    - plots/analysis/box_plot.jpeg
   featurize:
     cmd: python src/stages/featurize.py
     deps:
     - data/processed/_analyzed_.csv
     outs:
     - data/processed/_featured_.csv
+  data_split:
+    cmd: python src/stages/data_split.py
+    deps:
+    - data/processed/_featured_.csv
+    outs:
+    - data/processed/X_test.csv
+    - data/processed/X_train.csv
+    - data/processed/y_test.csv
+    - data/processed/y_train.csv
+  train:
+    cmd: python src/stages/train.py
+    deps:
+    - data/processed/X_train.csv
+    - data/processed/y_train.csv
+    outs:
+    - model/model.joblib
+  evaluate:
+    cmd: python src/stages/evaluate.py
+    deps:
+    - model/model.joblib
+    outs:
+    - plots/evaluate/scatter_plot.jpeg
+    metrics:
+    - metrics/metrics.json:
+        cache: false

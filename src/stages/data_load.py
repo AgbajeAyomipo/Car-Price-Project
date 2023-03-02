@@ -19,7 +19,7 @@ def data_load() -> None:
                'Airbags', 'Price']
     
     df_ = df_[reset_cols_]
-    df_.to_csv(config_['data']['data_file_2'])
+    df_.to_csv(config_['data']['data_file_2'], index = 0)
 
     print('Data Loaded Successfully')
 

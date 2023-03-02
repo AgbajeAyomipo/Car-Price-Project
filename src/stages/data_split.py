@@ -33,10 +33,10 @@ def data_split() -> None:
     y_test = pd.DataFrame(data = y_test,
                           columns = ['Price'])
     
-    X_train.to_csv(config_['data']['data_file_5'])
-    X_test.to_csv(config_['data']['data_file_6'])
-    y_train.to_csv(config_['data']['data_file_7'])
-    y_test.to_csv(config_['data']['data_file_8'])
+    X_train.to_csv(config_['data']['data_file_5'], index = 0)
+    X_test.to_csv(config_['data']['data_file_6'], index = 0)
+    y_train.to_csv(config_['data']['data_file_7'], index = 0)
+    y_test.to_csv(config_['data']['data_file_8'], index = 0)
 
     print("Data Successfully Splitted and Saved")
 
