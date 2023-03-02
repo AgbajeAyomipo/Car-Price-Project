@@ -1,0 +1,19 @@
+stages:
+  data_load:
+    cmd: python src/stages/data_load.py
+    deps:
+    - data/raw/car_price_prediction.csv
+    outs:
+    - data/processed/car_price_prediction_.csv
+  analyze:
+    cmd: python src/stages/analyze.py
+    deps:
+    - data/processed/car_price_prediction_.csv
+    outs:
+    - data/processed/_analyzed_.csv
+  featurize:
+    cmd: python src/stages/featurize.py
+    deps:
+    - data/processed/_analyzed_.csv
+    outs:
+    - data/processed/_featured_.csv

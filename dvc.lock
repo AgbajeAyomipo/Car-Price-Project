@@ -1,0 +1,32 @@
+schema: '2.0'
+stages:
+  data_load:
+    cmd: python src/stages/data_load.py
+    deps:
+    - path: data/raw/car_price_prediction.csv
+      md5: 695c54f1b2f8c33fc911f3127f6255aa
+      size: 2201879
+    outs:
+    - path: data/processed/car_price_prediction_.csv
+      md5: 5def9df2c4c498e2a433e6bb782cc8bb
+      size: 2221117
+  analyze:
+    cmd: python src/stages/analyze.py
+    deps:
+    - path: data/processed/car_price_prediction_.csv
+      md5: 5def9df2c4c498e2a433e6bb782cc8bb
+      size: 2221117
+    outs:
+    - path: data/processed/_analyzed_.csv
+      md5: 3ad5892f9f3f0b1f0dddec2e91b15e8f
+      size: 2653086
+  featurize:
+    cmd: python src/stages/featurize.py
+    deps:
+    - path: data/processed/_analyzed_.csv
+      md5: 3ad5892f9f3f0b1f0dddec2e91b15e8f
+      size: 2653086
+    outs:
+    - path: data/processed/_featured_.csv
+      md5: d78bf68161872c4f10e5cccc13069cf5
+      size: 62115070
