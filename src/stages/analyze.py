@@ -6,7 +6,7 @@ import os
 import yaml
 
 def analyze() -> None:
-    os.chdir('../')
+    os.chdir('C:/Users/Ayo Agbaje/Documents/Code/Python/GIGS/PYTHON_docs/py_files/Car-Price-Project')
 
     with open('params.yaml') as config__:
         config_ = yaml.safe_load(config__)
@@ -78,7 +78,7 @@ def analyze() -> None:
         elif (col_ > 100000):
             return '100km and above'
 
-    df_['Mileage'] = df_['Mileage'].map(mileage_map_mini_)
+    df_['Mileage'] = df_['Mileage'].apply(mileage_map_mini_)
 
     mileage_group_ = df_.groupby('Mileage')
     mileage_group_mean_ = mileage_group_.mean()
@@ -91,7 +91,7 @@ def analyze() -> None:
         data = df_['Gear box type'].value_counts()
     )
     gear_df_.columns = ['Count']
-    gear_df_
+    # gear_df_
 
     sns.countplot(x = 'Gear box type', data = df_, ax = ax[0], color = 'black')
     ax[0].bar_label(ax[0].containers[0], color = 'black')
@@ -117,8 +117,8 @@ def analyze() -> None:
     plt.savefig(config_['plot']['plot_7'])
 
     df_ = df_.sort_values(by = df_.columns[-1], ascending= False)
-    df_ = df_.reset_index()
-    df_ = df_.drop(0, axis = 0)
+    df_ = df_.iloc[1:, :]
+    # df_ = df_.drop('Unnamed: 0', axis = 1)
 
     not_categorical_ = df_._get_numeric_data().columns
     categorical_ = set(df_.columns).difference(not_categorical_)

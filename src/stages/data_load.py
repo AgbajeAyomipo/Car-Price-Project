@@ -6,7 +6,7 @@ import os
 import yaml
 
 def data_load() -> None:
-    os.chdir('../')
+    os.chdir('C:/Users/Ayo Agbaje/Documents/Code/Python/GIGS/PYTHON_docs/py_files/Car-Price-Project')
 
     with open('params.yaml') as config__:
         config_ = yaml.safe_load(config__)

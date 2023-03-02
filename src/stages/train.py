@@ -8,13 +8,13 @@ import pandas as pd
 import joblib
 
 def train() -> None:
-    os.chdir('../')
+    os.chdir('C:/Users/Ayo Agbaje/Documents/Code/Python/GIGS/PYTHON_docs/py_files/Car-Price-Project')
 
     with open('params.yaml') as config__:
         config_ = yaml.safe_load(config__)
     
-    X_train = pd.DataFrame(config_['data']['data_file_5'])
-    y_train = pd.DataFrame(config_['data']['data_file_7'])
+    X_train = pd.read_csv(config_['data']['data_file_5'])
+    y_train = pd.read_csv(config_['data']['data_file_7'])
 
     xgbr = XGBRegressor(
         n_estimators = config_['base']['params']['n_estimators'],
