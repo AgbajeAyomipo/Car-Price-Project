@@ -171,7 +171,7 @@ def featurize() -> None:
     df_['Color'] = df_['Color'].map(color_map_)
 
     model_df_ = pd.get_dummies(df_['Model'], drop_first = True)
-    # df__ = pd.concat([df_, model_df_], axis = 1)
+    df_ = pd.concat([df_, model_df_], axis = 1)
     df_ = df_.drop(['ID', 'Model'], axis = 1)
 
     df_.to_csv(config_['data']['data_file_4'], index = 0)

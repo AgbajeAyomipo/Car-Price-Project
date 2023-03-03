@@ -117,7 +117,7 @@ def analyze() -> None:
     plt.savefig(config_['plot']['plot_7'])
 
     _df = _df.sort_values(by = _df.columns[-1], ascending= False)
-    _df = _df.iloc[1000:, :]
+    _df = _df.iloc[1000:14000, :]
 
     not_categorical_ = _df._get_numeric_data().columns
     categorical_ = set(_df.columns).difference(not_categorical_)
