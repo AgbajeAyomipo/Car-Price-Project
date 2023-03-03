@@ -19,10 +19,12 @@ plot:
   plot_8: 'plots/evaluate/scatter_plot.jpeg'
 
 base:
+  random_state: 42
+  test_size: .25
   params:
-    learning_rate: 0.25911329031077535
-    max_depth: 8
-    n_estimators: 169
+    learning_rate: 0.3804001475844762
+    max_depth: 7
+    n_estimators: 113
 
 model:
   name: 'model/model.joblib'

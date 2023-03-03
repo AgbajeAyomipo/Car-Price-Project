@@ -16,7 +16,7 @@ def data_split() -> None:
     X = df__.drop('Price', axis = 1).values
     y = df__['Price'].values
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .23, random_state = 42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = config_['base']['test_size'], random_state = config_['base']['random_state'])
     
     scale_ = MinMaxScaler(feature_range=(0,1))
 

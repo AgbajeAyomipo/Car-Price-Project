@@ -59,40 +59,40 @@ stages:
       size: 62115070
     outs:
     - path: data/processed/X_test.csv
-      md5: 375d28a766a7387d78d8a9324e3d656d
-      size: 28870952
+      md5: 07b2260ef4ea99681e349fb28a4159a0
+      size: 31374851
     - path: data/processed/X_train.csv
-      md5: 5aee08205502a3ef47081fa98bfe4a6d
-      size: 96592088
+      md5: 69dd58323bcce3f87790397057c54546
+      size: 94088189
     - path: data/processed/y_test.csv
-      md5: 4369e7656a706be8617c3a580db47e53
-      size: 28576
+      md5: f6bdf1f4ffa77a52a144334b94b164e3
+      size: 31037
     - path: data/processed/y_train.csv
-      md5: 58d6385d3b7bd43084f8eb036704e7bd
-      size: 95676
+      md5: 9d23062497e09be22da1b0f6a54c75d5
+      size: 93215
   train:
     cmd: python src/stages/train.py
     deps:
     - path: data/processed/X_train.csv
-      md5: 5aee08205502a3ef47081fa98bfe4a6d
-      size: 96592088
+      md5: 69dd58323bcce3f87790397057c54546
+      size: 94088189
     - path: data/processed/y_train.csv
-      md5: 58d6385d3b7bd43084f8eb036704e7bd
-      size: 95676
+      md5: 9d23062497e09be22da1b0f6a54c75d5
+      size: 93215
     outs:
     - path: model/model.joblib
-      md5: f690a856457cf8c8cb58d586eb69f943
-      size: 456483
+      md5: be75bdb1bd7403363498435e01fefc9e
+      size: 251135
   evaluate:
     cmd: python src/stages/evaluate.py
     deps:
     - path: model/model.joblib
-      md5: f690a856457cf8c8cb58d586eb69f943
-      size: 456483
+      md5: be75bdb1bd7403363498435e01fefc9e
+      size: 251135
     outs:
     - path: metrics/metrics.json
-      md5: 2ca36105346efab763faf06cf32f036f
-      size: 200
+      md5: 8717e3f1f3a8aec7af883b4c1256ba47
+      size: 202
     - path: plots/evaluate/scatter_plot.jpeg
-      md5: 00263ec33471d952e187ac9e51533740
-      size: 32671
+      md5: 51075faf50cff37ff8ac0fcb8dd260dd
+      size: 32314
