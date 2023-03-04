@@ -49,6 +49,8 @@ def evaluate() -> None:
 
     plt.figure(figsize = (6, 10))
     sns.scatterplot(x = y_test, y = preds_)
+    plt.xlabel('True Values')
+    plt.xlabel('Predicted Values')
     plt.plot(preds_, preds_, color = 'red')
 
     plt.savefig(config_['plot']['plot_8'])

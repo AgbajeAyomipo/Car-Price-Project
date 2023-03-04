@@ -94,5 +94,5 @@ stages:
       md5: 6afc915326f15631ffda272e9ea6e029
       size: 201
     - path: plots/evaluate/scatter_plot.jpeg
-      md5: 78ccda57e9785b9bee683541a1331c1d
-      size: 76662
+      md5: e012d125a5f59b77962ce7eccfc6414c
+      size: 77737

@@ -1,0 +1,15 @@
+dvc[s3]
+dvclive
+pandas
+numpy
+scikit-learn
+xgboost
+fastapi
+python-box==6.0.1
+matplotlib
+ipykernel
+notebook
+seaborn
+mlem
+docker
+gto
